@@ -61,8 +61,6 @@
             }
         });
 
-        // according to docs you don't need to run selenium_stop, 
-        // phantomjs will shut down on it's own but it is a good practice
         grunt.registerTask('tests', ['mkdir','clean', 'selenium_phantom_hub', 'cucumberjs', 'selenium_stop']);
     };
 })();
