@@ -1,0 +1,9 @@
+*.log
+.DS_Store
+.DS_Store?
+._*
+
+logs
+.tmp
+.grunt
+node_modules

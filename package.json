@@ -1,0 +1,23 @@
+{
+  "name": "cucumber-test",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svalchinov/cucumber-test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-cucumber": "^0.2.3",
+    "grunt-mkdir": "^0.1.2",
+    "grunt-selenium-webdriver": "^0.2.431",
+    "load-grunt-tasks": "^1.0.0",
+    "phantomjs": "^1.9.12",
+    "webdriverio": "^2.3.0"
+  }
+}
