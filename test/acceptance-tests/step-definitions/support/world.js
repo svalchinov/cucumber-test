@@ -15,4 +15,3 @@ var World = function (callback) {
 };
 
 exports.World = World;
-

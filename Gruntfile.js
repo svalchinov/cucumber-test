@@ -11,21 +11,21 @@
             pkg: grunt.file.readJSON('package.json'),
 
             // clears folders
-            mkdir: {
-                all: {
-                    options: {
-                        create: ['test/.tmp/screenshots']
-                    },
-                },
-            },
-            clean: {
-                dist: {
-                    files: [{
-                        dot: true,
-                        src: ['test/.tmp/screenshots/*']
-                    }]
-                }
-            },
+            // mkdir: {
+            //     all: {
+            //         options: {
+            //             create: ['test/.tmp/screenshots']
+            //         },
+            //     }
+            // },
+            // clean: {
+            //     dist: {
+            //         files: [{
+            //             dot: true,
+            //             src: ['test/.tmp/screenshots/*']
+            //         }]
+            //     }
+            // },
 
             // cucumber tests
             cucumberjs: {
@@ -61,6 +61,6 @@
             }
         });
 
-        grunt.registerTask('tests', ['mkdir','clean', 'selenium_phantom_hub', 'cucumberjs', 'selenium_stop']);
+        grunt.registerTask('tests', ['selenium_phantom_hub', 'cucumberjs', 'selenium_stop']);
     };
 })();
