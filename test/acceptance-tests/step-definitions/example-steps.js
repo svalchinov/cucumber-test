@@ -1,30 +1,19 @@
-var tempResult;
-
-module.exports = function(){
+module.exports = function() {
     'use strict';
 
     this.World = require('./support/world.js').World;
 
-    // background
     this.Given(/^I go on the website "([^"]*)"$/, function(url, next) {
-        this.browser
-        .url(url)
-        .call(next);
+        this.driver.url(url).call(next);
     });
 
-    // step defs
-    this.When(/^I use getTitle\(\) to get the title of this website$/, function(next) {
+    this.Then(/^the title of the page is "([^"]*)"$/, function(title, next) {
         var assert = this.assert;
-        this.browser
-        .getTitle(function(err, title) {
-            tempResult = title;
-            next();
-        });
-    });
 
-    this.Then(/^the command should return "([^"]*)"$/, function(result, next) {
-        var assert = this.assert;
-        assert(tempResult === result , ' result of command is "'+ tempResult + '" but should be "'+ result);
-        next();
+        this.driver.getTitle(function(err, result) {
+            assert.equal(result, title, 'Expected ' + result + ' to be ' + title);
+        }).call(next);
+
+
     });
 };

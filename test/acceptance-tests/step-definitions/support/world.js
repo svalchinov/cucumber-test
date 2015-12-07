@@ -1,17 +1,16 @@
 var webdriverjs = require('webdriverio'),
-	assert = require('assert');
+    assert = require('assert');
 
-var client = webdriverjs.remote({ desiredCapabilities: {browserName: 'phantomjs'}, logLevel: 'verbose' });
+var client = webdriverjs.remote({
+    desiredCapabilities: { browserName: 'phantomjs'},
+    logLevel: 'verbose'
+});
 
-client.init();
-
-var World = function (callback) {
-	'use strict';
-
+var World = function(callback) {
+    'use strict';
+    this.driver = client;
 	this.assert = assert;
-	this.browser = client; // browser will be available in step definitions
-
-	callback();
+    this.driver.init(callback);
 };
 
 exports.World = World;

@@ -11,13 +11,12 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "assert": "^1.3.0",
     "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-cucumber": "^0.2.3",
-    "grunt-mkdir": "^0.1.2",
-    "grunt-selenium-webdriver": "^0.2.431",
-    "load-grunt-tasks": "^1.0.0",
-    "phantomjs": "^1.9.12",
-    "webdriverio": "^2.3.0"
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-cucumber": "^0.3.0",
+    "grunt-selenium-webdriver": "^0.2.482",
+    "load-grunt-tasks": "^3.3.0",
+    "phantomjs": "^1.9.19"
   }
 }
