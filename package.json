@@ -17,6 +17,7 @@
     "grunt-cucumber": "^0.3.0",
     "grunt-selenium-webdriver": "^0.2.482",
     "load-grunt-tasks": "^3.3.0",
-    "phantomjs": "^1.9.19"
+    "phantomjs": "^1.9.19",
+    "webdriverio": "^3.3.0"
   }
 }
